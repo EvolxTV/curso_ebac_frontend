@@ -3,33 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Formulário de validacão</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de tarefas</title>
   </head>
   <body>
     <div class="container">
-      <h1>Formulário de validacão</h1>
-      <h3>Insira o valor nos campos abaixo:</h3>
-      <form id="validate-form">
-        <input
-          type="number"
-          id="valor-a"
-          required
-          placeholder="Valor A"
-          max="999"
-        />
-        <input
-          type="number"
-          id="valor-b"
-          required
-          placeholder="Valor B"
-          max="999"
-        />
-        <button type="submit" id="validate">VALIDAR</button>
-        <button type="reset" id="reset">RESETAR</button>
+      <header>
+        <h1>Lista de tarefas</h1>
+      </header>
+      <form id="to-do-form">
+        <div class="form-style">
+          <input
+            type="text"
+            name=""
+            id="task-input"
+            placeholder="Nome da tarefa"
+          />
+          <button type="submit">
+            <img src="./images/adicionar.png" alt="" />
+          </button>
+        </div>
       </form>
-      <p class="message"></p>
+      <ul></ul>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
