@@ -1,32 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Lista de tarefas</title>
+    <title>Formulário de cadastro</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Lista de tarefas</h1>
+        <h1>Registro</h1>
       </header>
-      <form id="to-do-form">
-        <div class="form-style">
+      <form>
+        <div class="inputs">
           <input
             type="text"
-            name=""
-            id="task-input"
-            placeholder="Nome da tarefa"
+            name="nome"
+            id="nome"
+            placeholder="Digite seu nome"
           />
-          <button type="submit">
-            <img src="./images/adicionar.png" alt="" />
-          </button>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu Email"
+          />
+          <input
+            type="tel"
+            name="telefone"
+            id="telefone"
+            placeholder="Digite seu número de telefone"
+          />
+          <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" />
+          <input
+            type="text"
+            name="endereco"
+            id="endereco"
+            placeholder="Digite seu endereço completo"
+          />
+          <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" />
         </div>
+        <button type="submit">Registrar</button>
       </form>
-      <ul></ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="/js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="/js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
