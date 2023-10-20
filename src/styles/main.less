@@ -1,96 +1,40 @@
-@import "mapas.less";
-@breakpointMobile: ~"(max-width: 767px)";
-@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+@fontePrincipal: "Roboto", sans-serif;
+@fonteDoTitulo: "Lobster", cursive;
+@corDoTexto: #fff;
+@corDeFundo: #eb3b5a;
+@corDeTextoDoBotao: #000;
+@corDoFundoDoBotao: #f7b731;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: #colors[backgroundcolor];
+  background-color: @corDeFundo;
+  font-family: @fontePrincipal;
+  color: @corDoTexto;
+}
+h1 {
+  font-family: @fonteDoTitulo;
+  font-size: 3em;
 }
 
-li {
-  list-style: none;
-}
-
-.container {
-  max-width: 1024px;
+main {
+  max-width: 960px;
   width: 100%;
-  margin: 0 auto;
-  @media @breakpointMobile {
-    max-width: 70%;
-  }
-  @media @breakpointTablet {
-    max-width: 80%;
-  }
+  margin: 100px auto;
+  text-align: center;
 }
-
-header {
-  background-color: #colors[headercolor];
-  position: sticky;
-  top: 0;
-  left: 0;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-  }
-}
-.menu {
-  display: flex;
-  li {
-    font-weight: bold;
-    margin-left: 24px;
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-}
-
-section {
-  padding: 56px 0;
-
-  .products {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 32.66%);
-    column-gap: 1%;
-    row-gap: 4%;
-    width: 100%;
-    @media @breakpointMobile {
-      display: block;
-    }
-    @media @breakpointTablet {
-      grid-template-columns: repeat(2, 48.5%);
-      column-gap: 3%;
-    }
-    .product-item {
-      @media @breakpointMobile {
-        margin-bottom: 32px;
-      }
-    }
-    .product-item img {
-      width: 100%;
-      border-radius: 16px;
-    }
-    .product-button {
-      display: block;
-      background-color: #colors[buttoncolor];
-      color: #fff;
-      text-align: center;
-      padding: 8px 0;
-      border-radius: 8px;
-      margin-top: 8px;
-      text-decoration: none;
-      &:hover {
-        background-color: #colors[buttonhover];
-      }
-    }
-  }
+button {
+  padding: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 16px;
+  border-radius: 8px;
+  background-color: @corDoFundoDoBotao;
+  color: @corDeTextoDoBotao;
+  font-family: @fontePrincipal;
 }
